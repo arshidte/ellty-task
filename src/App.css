@@ -1,0 +1,119 @@
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+button:focus {
+  outline: none;
+}
+.app-main {
+  border: 1px solid transparent;
+  outline: 1px solid #eeeeee;
+  outline-offset: -1px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 16px;
+  margin: 20px;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 369px;
+  margin: 19px 0;
+}
+
+/* Checkbox style */
+.checkbox-container input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cdcdcd;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox-container input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 6px;
+  height: 12px;
+  border: solid #e3e3e3;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.checkbox-container input[type="checkbox"]:hover::before {
+  opacity: 1;
+}
+
+.checkbox-container input[type="checkbox"]:focus {
+  box-shadow: 0px 0px 0px 2px #ccd2e1;
+}
+
+.checkbox-container input[type="checkbox"]:focus::before {
+  border-color: #878787;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #2469f6;
+  border: 2px solid #2469f6;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.checkbox-container input[type="checkbox"]:checked:hover {
+  background-color: #5087f8;
+  border: 2px solid #5087f8;
+}
+
+.checkbox-container label {
+  margin-left: 10px;
+  cursor: pointer;
+}
+/* Checkbox style */
+
+.hr-line {
+  background-color: #cdcdcd;
+  height: 1px;
+  width: 100%;
+}
+
+.custom-btn {
+  background-color: #ffce22;
+  width: 100%;
+  margin: 19px 0;
+  color: #1f2128;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.custom-btn:hover {
+  background-color: #ffd84d;
+}
+
+@media screen and (max-width: 576px) {
+  .list-item {
+    width: 250px;
+  }
+}
